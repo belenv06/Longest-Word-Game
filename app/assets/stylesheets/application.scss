@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  background-color: #d9ddcf;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .container {
+   padding: 80px;
+ }
+
+ .small-container-main {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  margin: 40px;
+  border-radius: 5px;
+ }
+
+ .small-container {
+  text-align: center;
+  padding: 40px;
+ }
+
+ .cards {
+   padding: auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+ }
+
+ .card {
+   border: 1px solid #4E13CD;
+   border-radius: 2px;
+   background-color: white;
+   color: #4E13CD;
+   border-radius: 5px;
+   width: 52px;
+   margin: 0px 10px;
+ }
+
+ .card:hover {
+  border-radius: 2px;
+  background-color: #4E13CD;
+  color: white;
+  border-radius: 5px;
+  width: 52px;
+}
+
+ .title {
+   margin-top: 15px;
+   text-align: center;
+   font-size: 30px;
+  }
+
+  .input {
+    border: 1px solid #4E13CD;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .submit {
+    padding: 10px;
+    background: #4E13CD;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .buttom {
+    padding: 15px 50px 15px 50px;
+    background: #4E13CD;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+  }

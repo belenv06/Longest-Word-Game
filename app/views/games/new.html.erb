@@ -1,0 +1,36 @@
+
+<div class="container">
+
+  <div class="small-container-main">
+    <h1 class="title"> New Longest game </h1>
+      <div class="cards">
+        <% @letters.each do |letter| %>
+          <div class="card">
+            <h3> <%= letter %> </h3>
+          </div>
+        <% end %>
+      </div>
+  </div>
+
+  <div class="small-container">
+  
+    <h1 class="title"> What is the longest word you can find? </h1>
+
+      <form action="/score" method="POST" class="form-inline">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :letters, @letters %>
+      <div class="input-group input-group">
+        <input type="text" name="word" class="input">
+      <span class="input-group-btn">
+        <input type="submit" value="play" class="submit">
+      </span>
+      </div>
+  </form>
+
+  </div>
+
+  <div class="small-container">
+    <h2> Now result </h2>
+    <p> your word:<%= @your_word %> </p>
+  </div>
+</div>
