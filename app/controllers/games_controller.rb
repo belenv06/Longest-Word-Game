@@ -11,14 +11,16 @@ class GamesController < ApplicationController
 
   def score
     @letters = params[:letters].split
-    @word = (params[:word] || "").upcase
+    @word = params[:word] || ""
     @included = include?(@word, @letters)
     @english_word = english_word?(@word)
   end
 
   private
   def include?(your_word, my_letters)
-    your_word.chars.all?
+    your_word.chars.all? do |letter|
+      my_letters.include?(letter)
+    end
   end
 
   def english_word?(your_word)
